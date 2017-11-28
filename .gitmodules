@@ -1,0 +1,3 @@
+[submodule "Assets/Libs/Entitas-CSharp"]
+	path = Assets/Libs/Entitas-CSharp
+	url = https://github.com/sschmid/Entitas-CSharp.git
