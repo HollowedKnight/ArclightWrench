@@ -1,9 +1,9 @@
 ﻿using Entitas;
 using UnityEngine;
 
-namespace Source.Simulation.Components
+namespace Source.Simulation.Components.View
 {
-    [Game]
+    [View]
     public class ViewComponent : IComponent
     {
         public GameObject GameObject;

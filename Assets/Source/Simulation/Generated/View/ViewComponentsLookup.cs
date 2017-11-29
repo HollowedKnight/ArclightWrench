@@ -6,20 +6,20 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-public static class GameComponentsLookup {
+public static class ViewComponentsLookup {
 
-    public const int SourceSimulationComponentsInputLeftMouseComponents = 0;
-    public const int SourceSimulationComponentsInputRightMouseComponents = 1;
+    public const int SourceSimulationComponentsViewView = 0;
+    public const int SourceSimulationComponentsViewViewName = 1;
 
     public const int TotalComponents = 2;
 
     public static readonly string[] componentNames = {
-        "SourceSimulationComponentsInputLeftMouseComponents",
-        "SourceSimulationComponentsInputRightMouseComponents"
+        "SourceSimulationComponentsViewView",
+        "SourceSimulationComponentsViewViewName"
     };
 
     public static readonly System.Type[] componentTypes = {
-        typeof(Source.Simulation.Components.Input.LeftMouseComponents),
-        typeof(Source.Simulation.Components.Input.RightMouseComponents)
+        typeof(Source.Simulation.Components.View.ViewComponent),
+        typeof(Source.Simulation.Components.View.ViewNameComponent)
     };
 }
