@@ -1,9 +1,6 @@
-﻿namespace Source.Simulation.Logic
+﻿public class ViewSystems : Feature
 {
-    public class ViewSystems : Feature
+    public ViewSystems(Contexts contexts) : base("View Systems")
     {
-        public ViewSystems(Contexts contexts) : base("View Systems")
-        {
-        }
     }
 }

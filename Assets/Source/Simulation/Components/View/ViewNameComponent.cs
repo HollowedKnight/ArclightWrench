@@ -1,10 +1,6 @@
 ﻿using Entitas;
 
-namespace Source.Simulation.Components.View
+[View]
+public class ViewNameComponent : IComponent
 {
-    [View]
-    public class ViewNameComponent : IComponent
-    {
-        
-    }
 }

@@ -8,18 +8,18 @@
 //------------------------------------------------------------------------------
 public partial class ViewEntity {
 
-    static readonly Source.Simulation.Components.View.ViewNameComponent sourceSimulationComponentsViewViewNameComponent = new Source.Simulation.Components.View.ViewNameComponent();
+    static readonly ViewNameComponent viewNameComponent = new ViewNameComponent();
 
-    public bool isSourceSimulationComponentsViewViewName {
-        get { return HasComponent(ViewComponentsLookup.SourceSimulationComponentsViewViewName); }
+    public bool isViewName {
+        get { return HasComponent(ViewComponentsLookup.ViewName); }
         set {
-            if (value != isSourceSimulationComponentsViewViewName) {
-                var index = ViewComponentsLookup.SourceSimulationComponentsViewViewName;
+            if (value != isViewName) {
+                var index = ViewComponentsLookup.ViewName;
                 if (value) {
                     var componentPool = GetComponentPool(index);
                     var component = componentPool.Count > 0
                             ? componentPool.Pop()
-                            : sourceSimulationComponentsViewViewNameComponent;
+                            : viewNameComponent;
 
                     AddComponent(index, component);
                 } else {
@@ -40,17 +40,17 @@ public partial class ViewEntity {
 //------------------------------------------------------------------------------
 public sealed partial class ViewMatcher {
 
-    static Entitas.IMatcher<ViewEntity> _matcherSourceSimulationComponentsViewViewName;
+    static Entitas.IMatcher<ViewEntity> _matcherViewName;
 
-    public static Entitas.IMatcher<ViewEntity> SourceSimulationComponentsViewViewName {
+    public static Entitas.IMatcher<ViewEntity> ViewName {
         get {
-            if (_matcherSourceSimulationComponentsViewViewName == null) {
-                var matcher = (Entitas.Matcher<ViewEntity>)Entitas.Matcher<ViewEntity>.AllOf(ViewComponentsLookup.SourceSimulationComponentsViewViewName);
+            if (_matcherViewName == null) {
+                var matcher = (Entitas.Matcher<ViewEntity>)Entitas.Matcher<ViewEntity>.AllOf(ViewComponentsLookup.ViewName);
                 matcher.componentNames = ViewComponentsLookup.componentNames;
-                _matcherSourceSimulationComponentsViewViewName = matcher;
+                _matcherViewName = matcher;
             }
 
-            return _matcherSourceSimulationComponentsViewViewName;
+            return _matcherViewName;
         }
     }
 }
