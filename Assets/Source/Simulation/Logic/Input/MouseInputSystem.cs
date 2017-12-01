@@ -3,23 +3,15 @@ using UnityEngine;
 
 public class MouseInputSystem : IInitializeSystem, IExecuteSystem
 {
-    private readonly InputContext _context;
-
-    private InputEntity _leftMouseEntity;
-    private InputEntity _rightMouseEntity;
-
+    private readonly GameContext _gameContext;
+    
     public MouseInputSystem(Contexts contexts)
     {
-        _context = contexts.input;
+        _gameContext = contexts.game;
     }
 
     public void Initialize()
     {
-        _context.isRightMouse = true;
-        _context.isLeftMouse = true;
-
-        _leftMouseEntity = _context.leftMouseEntity;
-        _rightMouseEntity = _context.rightMouseEntity;
     }
 
     public void Execute()
@@ -28,7 +20,9 @@ public class MouseInputSystem : IInitializeSystem, IExecuteSystem
 
         if (Input.GetMouseButtonDown(0))
         {
-            _leftMouseEntity.ReplaceMouseDown(mousePosition);
+            GameEntity entity = _gameContext.CreateEntity();
+            entity.isSpawnActorCommand = true;
+            entity.AddPosition(mousePosition);
         }
     }
 }
