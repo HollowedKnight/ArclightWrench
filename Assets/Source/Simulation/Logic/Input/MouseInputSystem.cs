@@ -24,9 +24,9 @@ public class MouseInputSystem : IInitializeSystem, IExecuteSystem
 
     public void Execute()
     {
-        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(UnityEngine.Input.mousePosition);
+        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        if (UnityEngine.Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
             _leftMouseEntity.ReplaceMouseDown(mousePosition);
         }
