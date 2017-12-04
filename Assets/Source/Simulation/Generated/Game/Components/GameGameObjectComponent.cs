@@ -8,25 +8,25 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public ActorComponent actor { get { return (ActorComponent)GetComponent(GameComponentsLookup.Actor); } }
-    public bool hasActor { get { return HasComponent(GameComponentsLookup.Actor); } }
+    public GameObjectComponent gameObject { get { return (GameObjectComponent)GetComponent(GameComponentsLookup.GameObject); } }
+    public bool hasGameObject { get { return HasComponent(GameComponentsLookup.GameObject); } }
 
-    public void AddActor(Source.ScriptableObjectsDefinition.Actor newValue) {
-        var index = GameComponentsLookup.Actor;
-        var component = CreateComponent<ActorComponent>(index);
+    public void AddGameObject(UnityEngine.GameObject newValue) {
+        var index = GameComponentsLookup.GameObject;
+        var component = CreateComponent<GameObjectComponent>(index);
         component.Value = newValue;
         AddComponent(index, component);
     }
 
-    public void ReplaceActor(Source.ScriptableObjectsDefinition.Actor newValue) {
-        var index = GameComponentsLookup.Actor;
-        var component = CreateComponent<ActorComponent>(index);
+    public void ReplaceGameObject(UnityEngine.GameObject newValue) {
+        var index = GameComponentsLookup.GameObject;
+        var component = CreateComponent<GameObjectComponent>(index);
         component.Value = newValue;
         ReplaceComponent(index, component);
     }
 
-    public void RemoveActor() {
-        RemoveComponent(GameComponentsLookup.Actor);
+    public void RemoveGameObject() {
+        RemoveComponent(GameComponentsLookup.GameObject);
     }
 }
 
@@ -40,17 +40,17 @@ public partial class GameEntity {
 //------------------------------------------------------------------------------
 public sealed partial class GameMatcher {
 
-    static Entitas.IMatcher<GameEntity> _matcherActor;
+    static Entitas.IMatcher<GameEntity> _matcherGameObject;
 
-    public static Entitas.IMatcher<GameEntity> Actor {
+    public static Entitas.IMatcher<GameEntity> GameObject {
         get {
-            if (_matcherActor == null) {
-                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.Actor);
+            if (_matcherGameObject == null) {
+                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.GameObject);
                 matcher.componentNames = GameComponentsLookup.componentNames;
-                _matcherActor = matcher;
+                _matcherGameObject = matcher;
             }
 
-            return _matcherActor;
+            return _matcherGameObject;
         }
     }
 }
