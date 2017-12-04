@@ -1,5 +1,5 @@
 ﻿using Entitas;
-using Source.ScriptableObjects;
+using Source.ScriptableObjectsDefinition;
 using UnityEngine;
 
 public class GameController : MonoBehaviour
@@ -27,7 +27,6 @@ public class GameController : MonoBehaviour
     {
         return new Feature("Systems")
             .Add(new InputFeature(contexts))
-            .Add(new GameFeature(contexts))
-            .Add(new ViewFeature(contexts));
+            .Add(new GameFeature(contexts));
     }
 }

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Source.CustomTypes;
+using UnityEngine;
 
 namespace Source.ScriptableObjectsDefinition
 {
@@ -6,7 +7,7 @@ namespace Source.ScriptableObjectsDefinition
     public class Actor : ScriptableObject
     {
         [SerializeField]
-        private string _name;
+        private EActor _id;
         
         [SerializeField]
         private GameObject _prefab;

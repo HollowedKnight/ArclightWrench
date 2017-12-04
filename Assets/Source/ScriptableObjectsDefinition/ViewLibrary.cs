@@ -1,13 +1,12 @@
 ﻿using System.Collections.Generic;
+using Source.CustomTypes;
 using UnityEngine;
 
 namespace Source.ScriptableObjectsDefinition
 {
-    [CreateAssetMenu]
+    [CreateAssetMenu(menuName = "ScriptableObjects/ViewLibrary")]
     public class ViewLibrary : ScriptableObject
     {
-        public GameObject Map;
-        public Dictionary<string, GameObject> Views;
-        
+        public List<Actor> Views = new List<Actor>();
     }
 }

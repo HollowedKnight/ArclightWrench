@@ -1,7 +1,10 @@
-﻿public class GameFeature : Feature
+﻿using Source.ScriptableObjectsDefinition;
+using UnityEngine;
+
+public class GameFeature : Feature
 {
     public GameFeature(Contexts contexts) : base("GameSystems")
     {
-        Add(new SpawnActorSystem(contexts));
+        Add(new CreateActorSystem(contexts));
     }
 }

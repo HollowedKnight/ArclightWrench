@@ -1,12 +1,13 @@
 ﻿using System.Collections.Generic;
 using Entitas;
+using Source.ScriptableObjectsDefinition;
 using UnityEngine;
 
-public class SpawnActorSystem : ReactiveSystem<GameEntity>
+public class CreateActorSystem : ReactiveSystem<GameEntity>
 {
     private readonly GameContext _gameContext;
 
-    public SpawnActorSystem(Contexts contexts) : base(contexts.game)
+    public CreateActorSystem(Contexts contexts) : base(contexts.game)
     {
         _gameContext = contexts.game;
     }
