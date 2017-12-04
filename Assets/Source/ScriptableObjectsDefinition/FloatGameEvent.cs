@@ -3,7 +3,7 @@
 namespace Source.ScriptableObjectsDefinition
 {
     [CreateAssetMenu(menuName = "TypeReference/Float")]
-    public class FloatReference : TypeReference<float>
+    public class FloatGameEvent : GameEvent<float>
     {
     }
 }

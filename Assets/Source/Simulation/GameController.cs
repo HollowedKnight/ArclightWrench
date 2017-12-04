@@ -7,6 +7,9 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private ViewLibrary _viewLibrary;
 
+    [SerializeField]
+    private ActorGameEvent _spawnEvent;
+    
     private Systems _systems;
     private Contexts _contexts;
 

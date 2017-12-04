@@ -3,8 +3,7 @@ using Source.ScriptableObjectsDefinition;
 
 namespace Source.Components.GameEventListener
 {
-    public class FloatGameEventListener : GenericGameEventListener<float, FloatReference, FloatUnityEvent>
+    public class FloatGameEventListener : GameEventListener<float, FloatGameEvent, FloatUnityEvent>
     {
-        
     }
 }

@@ -3,7 +3,7 @@ using Source.ScriptableObjectsDefinition;
 
 namespace Source.Components.GameEventListener
 {
-    public class ActorGameEventListener : GenericGameEventListener<Actor, ActorReference, ActorUnityEvent>
+    public class ActorGameEventListener : GameEventListener<Actor, ActorGameEvent, ActorUnityEvent>
     {
     }
 }

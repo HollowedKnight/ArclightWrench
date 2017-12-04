@@ -28,6 +28,7 @@ public class CreateActorSystem : ReactiveSystem<GameEntity>
         {
             var entity = entities[i];
             GameEntity actorEntity = _gameContext.CreateEntity();
+            
             actorEntity.AddPosition(entity.position.Value);
         }
     }
