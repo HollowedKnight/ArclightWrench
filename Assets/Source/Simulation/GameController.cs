@@ -1,8 +1,12 @@
 ﻿using Entitas;
+using Source.ScriptableObjects;
 using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+    [SerializeField]
+    private ViewLibrary _viewLibrary;
+
     private Systems _systems;
     private Contexts _contexts;
 

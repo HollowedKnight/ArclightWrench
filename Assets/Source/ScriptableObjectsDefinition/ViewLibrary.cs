@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Source.ScriptableObjects
+namespace Source.ScriptableObjectsDefinition
 {
     [CreateAssetMenu]
     public class ViewLibrary : ScriptableObject
