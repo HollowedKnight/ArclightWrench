@@ -10,5 +10,9 @@ namespace Source.ScriptableObjectsDefinition
         
         [SerializeField]
         private GameObject _prefab;
+
+        public GameObject Prefab {
+            get { return _prefab; }
+        }
     }
 }

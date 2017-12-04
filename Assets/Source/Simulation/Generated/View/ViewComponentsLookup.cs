@@ -8,18 +8,18 @@
 //------------------------------------------------------------------------------
 public static class ViewComponentsLookup {
 
-    public const int View = 0;
-    public const int ViewName = 1;
+    public const int Actor = 0;
+    public const int View = 1;
 
     public const int TotalComponents = 2;
 
     public static readonly string[] componentNames = {
-        "View",
-        "ViewName"
+        "Actor",
+        "View"
     };
 
     public static readonly System.Type[] componentTypes = {
-        typeof(ViewComponent),
-        typeof(ViewNameComponent)
+        typeof(ActorComponent),
+        typeof(ViewComponent)
     };
 }

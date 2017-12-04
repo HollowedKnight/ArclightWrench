@@ -8,17 +8,20 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
-    public const int Position = 0;
-    public const int SpawnActorCommand = 1;
+    public const int Actor = 0;
+    public const int Position = 1;
+    public const int SpawnActorCommand = 2;
 
-    public const int TotalComponents = 2;
+    public const int TotalComponents = 3;
 
     public static readonly string[] componentNames = {
+        "Actor",
         "Position",
         "SpawnActorCommand"
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(ActorComponent),
         typeof(PositionComponent),
         typeof(SpawnActorCommandComponent)
     };
