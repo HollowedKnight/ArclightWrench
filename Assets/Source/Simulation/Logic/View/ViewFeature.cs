@@ -1,8 +1,8 @@
 ﻿using Source.Simulation.Logic.View;
 
-public class ViewSystems : Feature
+public class ViewFeature : Feature
 {
-    public ViewSystems(Contexts contexts) : base("ViewSystems")
+    public ViewFeature(Contexts contexts) : base("ViewSystems")
     {
         Add(new CreateViewSystem(contexts));
     }

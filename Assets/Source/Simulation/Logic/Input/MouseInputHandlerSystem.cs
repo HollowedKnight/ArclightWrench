@@ -1,23 +1,18 @@
 ﻿using Entitas;
 using UnityEngine;
 
-public class MouseInputSystem : IInitializeSystem, IExecuteSystem
+public class MouseInputHandlerSystem : IExecuteSystem
 {
     private readonly GameContext _gameContext;
-    
-    public MouseInputSystem(Contexts contexts)
+
+    public MouseInputHandlerSystem(Contexts contexts)
     {
         _gameContext = contexts.game;
-    }
-
-    public void Initialize()
-    {
     }
 
     public void Execute()
     {
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
         if (Input.GetMouseButtonDown(0))
         {
             GameEntity entity = _gameContext.CreateEntity();
