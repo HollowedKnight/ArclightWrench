@@ -6,6 +6,9 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+
+using ArclightWrench.Simulation.Components.Game;
+
 public partial class GameEntity {
 
     static readonly SpawnActorCommandComponent spawnActorCommandComponent = new SpawnActorCommandComponent();

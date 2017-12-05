@@ -1,7 +1,11 @@
 ﻿using Entitas;
 using UnityEngine;
 
-public class PositionComponent : IComponent
+namespace ArclightWrench.Simulation.Components.Game
 {
-    public Vector2 Value;
+    [Game]
+    public class PositionComponent : IComponent
+    {
+        public Vector2 Value;
+    }
 }

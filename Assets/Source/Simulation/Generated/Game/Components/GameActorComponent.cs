@@ -6,6 +6,9 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+
+using ArclightWrench.Simulation.Components.Game;
+
 public partial class GameEntity {
 
     public ActorComponent actor { get { return (ActorComponent)GetComponent(GameComponentsLookup.Actor); } }

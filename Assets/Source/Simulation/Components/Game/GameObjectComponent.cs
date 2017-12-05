@@ -1,8 +1,11 @@
 ﻿using Entitas;
 using UnityEngine;
 
-[Game]
-public class GameObjectComponent : IComponent
+namespace ArclightWrench.Simulation.Components.Game
 {
-    public GameObject Value;
+    [Game]
+    public class GameObjectComponent : IComponent
+    {
+        public GameObject Value;
+    }
 }

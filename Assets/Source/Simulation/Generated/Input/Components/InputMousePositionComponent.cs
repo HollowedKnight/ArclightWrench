@@ -6,6 +6,9 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+
+using ArclightWrench.Simulation.Components.Input;
+
 public partial class InputEntity {
 
     public MousePositionComponent mousePosition { get { return (MousePositionComponent)GetComponent(InputComponentsLookup.MousePosition); } }

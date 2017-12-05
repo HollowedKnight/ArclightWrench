@@ -8,19 +8,19 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public PositionComponent position { get { return (PositionComponent)GetComponent(GameComponentsLookup.Position); } }
+    public ArclightWrench.Simulation.Components.Game.PositionComponent position { get { return (ArclightWrench.Simulation.Components.Game.PositionComponent)GetComponent(GameComponentsLookup.Position); } }
     public bool hasPosition { get { return HasComponent(GameComponentsLookup.Position); } }
 
     public void AddPosition(UnityEngine.Vector2 newValue) {
         var index = GameComponentsLookup.Position;
-        var component = CreateComponent<PositionComponent>(index);
+        var component = CreateComponent<ArclightWrench.Simulation.Components.Game.PositionComponent>(index);
         component.Value = newValue;
         AddComponent(index, component);
     }
 
     public void ReplacePosition(UnityEngine.Vector2 newValue) {
         var index = GameComponentsLookup.Position;
-        var component = CreateComponent<PositionComponent>(index);
+        var component = CreateComponent<ArclightWrench.Simulation.Components.Game.PositionComponent>(index);
         component.Value = newValue;
         ReplaceComponent(index, component);
     }

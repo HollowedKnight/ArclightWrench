@@ -6,6 +6,9 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+
+using ArclightWrench.Simulation.Components.Input;
+
 public partial class InputContext {
 
     public InputEntity leftMouseEntity { get { return GetGroup(InputMatcher.LeftMouse).GetSingleEntity(); } }

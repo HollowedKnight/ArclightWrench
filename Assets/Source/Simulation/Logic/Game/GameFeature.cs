@@ -1,10 +1,10 @@
-﻿using Source.ScriptableObjectsDefinition;
-using UnityEngine;
-
-public class GameFeature : Feature
+﻿namespace ArclightWrench.Simulation.Logic.Game
 {
-    public GameFeature(Contexts contexts) : base("GameSystems")
+    public class GameFeature : Feature
     {
-        Add(new CreateActorSystem(contexts));
+        public GameFeature(Contexts contexts) : base("GameSystems")
+        {
+            Add(new CreateActorSystem(contexts));
+        }
     }
 }

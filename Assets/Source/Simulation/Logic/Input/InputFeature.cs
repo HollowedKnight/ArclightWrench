@@ -1,7 +1,10 @@
-﻿public class InputFeature : Feature
+﻿namespace ArclightWrench.Simulation.Logic.Input
 {
-    public InputFeature(Contexts contexts) : base("InputSystems")
+    public class InputFeature : Feature
     {
-        Add(new MouseInputHandlerSystem(contexts));
+        public InputFeature(Contexts contexts) : base("InputSystems")
+        {
+            Add(new MouseInputHandlerSystem(contexts));
+        }
     }
 }

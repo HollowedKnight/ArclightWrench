@@ -1,23 +1,26 @@
 ﻿using Entitas;
 using UnityEngine;
 
-public class MouseInputHandlerSystem : IExecuteSystem
+namespace ArclightWrench.Simulation.Logic.Input
 {
-    private readonly GameContext _gameContext;
-
-    public MouseInputHandlerSystem(Contexts contexts)
+    public class MouseInputHandlerSystem : IExecuteSystem
     {
-        _gameContext = contexts.game;
-    }
+        private readonly GameContext _gameContext;
 
-    public void Execute()
-    {
-        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        if (Input.GetMouseButtonDown(0))
+        public MouseInputHandlerSystem(Contexts contexts)
         {
-            GameEntity entity = _gameContext.CreateEntity();
-            entity.isSpawnActorCommand = true;
-            entity.AddPosition(mousePosition);
+            _gameContext = contexts.game;
+        }
+
+        public void Execute()
+        {
+            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(UnityEngine.Input.mousePosition);
+            if (UnityEngine.Input.GetMouseButtonDown(0))
+            {
+                GameEntity entity = _gameContext.CreateEntity();
+                entity.isSpawnActorCommand = true;
+                entity.AddPosition(mousePosition);
+            }
         }
     }
 }
