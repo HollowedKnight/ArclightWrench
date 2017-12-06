@@ -1,3 +1,6 @@
 [submodule "Assets/Libs/Entitas-CSharp"]
 	path = Assets/Libs/Entitas-CSharp
 	url = https://github.com/sschmid/Entitas-CSharp.git
+[submodule "Assets/Plugins/AssetBundleBrowser"]
+	path = Assets/Plugins/AssetBundleBrowser
+	url = https://github.com/Unity-Technologies/AssetBundles-Browser.git
